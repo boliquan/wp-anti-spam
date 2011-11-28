@@ -1,10 +1,10 @@
 === WP Anti Spam ===
 Contributors: boliquan
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: spambots,spambot,spam,spammer,anti spam,wp anti spam,author,email,url,comment,ip,robot,robots,automated spambots,automated spambot,antispam,antispam bee,blacklist,nospamnx,bad behavior,akismet,block spam,avh first defense,bot,comment spam,blocklist,spam free,cache,cookie,session,block spam by math reloaded,captcha,commentluv,some chinese please,si captcha anti spam,comment luv,comments,spamfree,chinese,spammer blocker,artificial comments,artificial
+Tags: wp anti spam,spambot,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial
 Requires at least: 2.7
 Tested up to: 3.2.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 
 WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url". 
 
@@ -20,15 +20,14 @@ Besides, it can delete its own options, so it is a green plugin !
 
 * Add 'Banned Words' to avoid comments contains banned words.
 * Check 'Disallow Spambots' to avoid spambots.
+* Check 'Delete Options' to delete options while deactivate this plugin.
 * Check 'Support Author' to help more people known of WP Anti Spam,in order to help them stay away from spam comments.
-
 
 Related Links:
 
-* <a href="http://boliquan.com/wp-anti-spam/">WP-Anti-Spam FAQ</a>
-* <a href="http://boliquan.com/wp-anti-spam/">WP-Anti-Spam</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/">Download</a>
+* <a href="http://boliquan.com/wp-anti-spam/">WP Anti Spam</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/">Download</a>
 * <a href="http://boliquan.com/wp-code-highlight/">WP Code Highlight</a> | <a href="http://wordpress.org/extend/plugins/wp-code-highlight/">Download</a>
-* <a href="http://boliquan.com/yg-share/">YG-Share</a> | <a href="http://wordpress.org/extend/plugins/yg-share/">Download</a>
+* <a href="http://boliquan.com/yg-share/">YG Share</a> | <a href="http://wordpress.org/extend/plugins/yg-share/">Download</a>
 * <a href="http://boliquan.com/">BoLiQuan</a>
 * <a href="http://boliquan.com/">玻璃泉</a>
 * <a href="http://boliquan.com/">夜光</a>
@@ -38,11 +37,14 @@ Related Links:
 == Installation ==
 
 1. Download and extract `wp-anti-spam.zip` to `wp-content/plugins/`
-
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 
 == Changelog ==
+
+= 1.2.1 =
+
+* Add Romanian language packs(ro_RO), Thanks to: [Web Geek Sciense](http://webhostinggeeks.com/science/)
 
 = 1.2.0 =
 
@@ -73,6 +75,7 @@ Related Links:
 
 1. Admin page screenshot
 
+
 == Troubleshooting ==
 
 Please visit http://boliquan.com/wp-anti-spam/
@@ -81,7 +84,6 @@ Please visit http://boliquan.com/wp-anti-spam/
 == Frequently Asked Questions ==
 
 No questions now.
-
 If you have any question, you can sumbit it in http://boliquan.com/wp-anti-spam/
 
 
@@ -92,7 +94,4 @@ Please download and extract `wp-anti-spam.zip` to `wp-content/plugins/`
 
 == Translations ==
 
-
-The plugin comes with various translations.
-
-WP-Anti-Spam插件支持多语言，含有语言包模版，欢迎您来翻译 http://boliquan.com/wp-anti-spam/
+The plugin comes with various translations http://boliquan.com/wp-anti-spam/
