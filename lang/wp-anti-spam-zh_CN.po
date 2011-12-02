@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Anti-Spam Languages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-22 15:20+0800\n"
-"PO-Revision-Date: 2011-10-22 15:20+0800\n"
+"POT-Creation-Date: 2011-12-03 03:47+0800\n"
+"PO-Revision-Date: 2011-12-03 04:00+0800\n"
 "Last-Translator: 夜光 <berttung@gmail.com>\n"
 "Language-Team: 玻璃泉BoLiQuan.COM <berttung(#)gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,55 +16,67 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: D:\\xampp\\htdocs\\wp3\\wp-content\\plugins\\wp-anti-spam\n"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:33
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:34
 msgid "Error: The information you submit contains banned words."
 msgstr "错误：您提交的信息中含有禁止的词汇，请返回修改。"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:39
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:40
 msgid "Error: Your IP has been banned to leave comments."
 msgstr "错误：您的IP地址已被禁止发表评论。"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:45
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:46
+msgid "Error: Links are not allowed in comments."
+msgstr "错误：评论中禁止含有链接。"
+
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:53
 msgid "Error: Comments must contain Chinese."
 msgstr "错误：评论中必须含有中文。"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:67
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:75
 msgid "Error: You are a automated spambot or your browser does not enable Cookie."
 msgstr "错误：您是机器人或者您的浏览器不支持Cookie。"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:21
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:22
 msgid "Banned Words (one per line)"
 msgstr "禁止的词汇 (每行一个)"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:26
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:27
 msgid "Comments will be banned contain above words, no matter the words appear in \"comment\",\"ip\",\"name\",\"email\",\"url\"."
 msgstr "含有以上词汇的评论会被禁止,无论这个词汇出现在\"评论内容\",\"IP地址\",\"昵称\",\"邮箱\"还是\"网址\"中."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:32
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:33
 msgid "Disallow Spambots"
 msgstr "禁止机器自动评论"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:37
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:38
 msgid "Disallow automated spambots, but if you open the cache or your browser's Cookie are not enabled, please don't check this."
 msgstr "禁止机器自动评论,但是如果您开启了缓存或者浏览器不支持Cookie,请不要勾选此选项."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:43
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:44
+msgid "Disallow Links"
+msgstr "禁止评论中含链接"
+
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:49
+msgid "Disallow the comments that contain links."
+msgstr "禁止评论中含有链接,垃圾评论的最大特征就是包含链接."
+
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:55
 msgid "Some Chinese"
 msgstr "评论中必须含中文"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:48
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:60
 msgid "Notice: If you do not speak chinese, please don't check this."
 msgstr "评论内容中必须含有中文,勾选后可以阻止英文垃圾机器评论."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:54
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:66
 msgid "Delete Options"
 msgstr "禁用时自动删除设置"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:59
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:71
 msgid "Delete options while deactivate this plugin."
 msgstr "当禁用此插件时自动删除此插件的设置数据."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:80
+#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:92
 msgid "Save Changes"
 msgstr "保存更改"
 

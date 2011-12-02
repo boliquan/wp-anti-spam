@@ -4,6 +4,7 @@ function wp_anti_spam_admin() {
 }
 function wp_anti_spam_options(){
 	add_option('wp_anti_spam_spambots','yes');
+	add_option('wp_anti_spam_links','yes');
 	add_option('wp_anti_spam_deactivate','yes');
 ?>
 <div class="wrap">
@@ -35,6 +36,17 @@ function wp_anti_spam_options(){
 			<label>
 				<input type="checkbox" name="wp_anti_spam_spambots" value="yes" <?php if(get_option("wp_anti_spam_spambots")=='yes') echo 'checked="checked"'; ?> />
 				<?php _e("Disallow automated spambots, but if you open the cache or your browser's Cookie are not enabled, please don't check this.",'WP-Anti-Spam'); ?>
+			</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<th scope="row">
+			<?php _e('Disallow Links','WP-Anti-Spam'); ?>
+		</th>
+		<td>
+			<label>
+				<input type="checkbox" name="wp_anti_spam_links" value="yes" <?php if(get_option("wp_anti_spam_links")=='yes') echo 'checked="checked"'; ?> />
+				<?php _e("Disallow the comments that contain links.",'WP-Anti-Spam'); ?>
 			</label>
 		</td>
 	</tr>
@@ -74,7 +86,7 @@ function wp_anti_spam_options(){
 </table>
 
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="wp_anti_spam_words,wp_anti_spam_spambots,wp_anti_spam_cn_must,wp_anti_spam_deactivate,wp_anti_spam_support" />
+<input type="hidden" name="page_options" value="wp_anti_spam_words,wp_anti_spam_spambots,wp_anti_spam_links,wp_anti_spam_cn_must,wp_anti_spam_deactivate,wp_anti_spam_support" />
 
 <p class="submit">
 <input type="submit" class="button-primary" name="Submit" value="<?php _e('Save Changes'); ?>" />

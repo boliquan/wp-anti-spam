@@ -3,7 +3,7 @@
 Plugin Name: WP Anti Spam
 Plugin URI: http://boliquan.com/wp-anti-spam/
 Description: WP Anti Spam can anti automated spambots, it can also anti artificial spams by"comment","ip","name","email","url". If you speak chinese, you can check 'Some Chinese' to anti the spams from other languages. Besides,it can delete its own options, so it is a green plugin ! 
-Version: 1.2.1
+Version: 1.2.2
 Author: BoLiQuan
 Author URI: http://boliquan.com/
 Text Domain: WP-Anti-Spam
@@ -40,9 +40,16 @@ function wp_anti_spam($comment_data){
 		wp_die(__('Error: Your IP has been banned to leave comments.','WP-Anti-Spam').WASINFO);
 	}
 
+	if(get_option("wp_anti_spam_links")=='yes'){
+		$links = '/href=|http:\/\/|<\/a>/u';
+		if(preg_match($links, $comment_data['comment_content'])){
+			wp_die(__('Error: Links are not allowed in comments.','WP-Anti-Spam').WASINFO);
+		}
+	}
+
 	if(get_option("wp_anti_spam_cn_must")=='yes'){
 		$cn_char = '/[一-龥]/u';
-		if(!preg_match($cn_char, $comment_data['comment_content'])) {
+		if(!preg_match($cn_char, $comment_data['comment_content'])){
 			wp_die(__('Error: Comments must contain Chinese.','WP-Anti-Spam').WASINFO);
 		}
 	}

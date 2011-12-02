@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6T
 Tags: wp anti spam,spambot,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial
 Requires at least: 2.7
 Tested up to: 3.2.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url". 
 
@@ -20,6 +20,7 @@ Besides, it can delete its own options, so it is a green plugin !
 
 * Add 'Banned Words' to avoid comments contains banned words.
 * Check 'Disallow Spambots' to avoid spambots.
+* Check 'Disallow Links' to disallow the comments that contain links.
 * Check 'Delete Options' to delete options while deactivate this plugin.
 * Check 'Support Author' to help more people known of WP Anti Spam,in order to help them stay away from spam comments.
 
@@ -41,6 +42,10 @@ Related Links:
 
 
 == Changelog ==
+
+= 1.2.2 =
+
+* Disallow the comments that contain links(optional)
 
 = 1.2.1 =
 
