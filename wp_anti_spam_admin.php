@@ -5,7 +5,6 @@ function wp_anti_spam_admin() {
 function wp_anti_spam_options(){
 	add_option('wp_anti_spam_spambots','yes');
 	add_option('wp_anti_spam_links','yes');
-	add_option('wp_anti_spam_deactivate','yes');
 ?>
 <div class="wrap">
 	
