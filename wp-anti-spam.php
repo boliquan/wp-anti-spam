@@ -41,7 +41,7 @@ function wp_anti_spam($comment_data){
 	}
 
 	if(get_option("wp_anti_spam_links")=='yes'){
-		$links = '/href=|http:\/\/|<\/a>/u';
+		$links = '/http:\/\//u';
 		if(preg_match($links, $comment_data['comment_content'])){
 			wp_die(__('Error: Links are not allowed in comments.','WP-Anti-Spam').WASINFO);
 		}
