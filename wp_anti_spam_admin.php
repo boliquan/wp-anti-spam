@@ -1,10 +1,13 @@
 <?php
-function wp_anti_spam_admin() {
+function wp_anti_spam_admin(){
 	add_options_page('WP Anti Spam Options', 'WP Anti Spam','manage_options', __FILE__, 'wp_anti_spam_options');
 }
 function wp_anti_spam_options(){
 	add_option('wp_anti_spam_spambots','yes');
 	add_option('wp_anti_spam_links','yes');
+	add_option('wp_anti_spam_gravatar','no-treatment');
+	add_option('wp_anti_spam_min','0');
+	add_option('wp_anti_spam_max','9999');
 ?>
 <div class="wrap">
 	
@@ -22,7 +25,7 @@ function wp_anti_spam_options(){
 		</th>
 		<td>
 			<label>
-				<textarea type="text" name="wp_anti_spam_words" cols="50" rows="16" style="width:90%;font-size:12px;"><?php echo get_option('wp_anti_spam_words'); ?></textarea>
+				<textarea type="text" name="wp_anti_spam_words" cols="50" rows="12" style="width:86%;font-size:12px;"><?php echo get_option('wp_anti_spam_words'); ?></textarea>
 				<br /><?php _e('Comments will be banned contain above words, no matter the words appear in "comment","ip","name","email","url".','WP-Anti-Spam'); ?>
 			</label>
 		</td>
@@ -62,6 +65,43 @@ function wp_anti_spam_options(){
 	</tr>
 	<tr valign="top">
 		<th scope="row">
+			<?php _e('When No Gravatar','WP-Anti-Spam'); ?>
+		</th>
+		<td>
+			<label>
+				<input name="wp_anti_spam_gravatar" type="radio" value="no-treatment"<?php if (get_option('wp_anti_spam_gravatar') == 'no-treatment') { ?> checked="checked"<?php } ?> />
+				<?php _e('no treatment','WP-Anti-Spam'); ?>
+			</label>
+			&nbsp;
+			<label>
+				<input name="wp_anti_spam_gravatar" type="radio" value="mark-it-as-spam"<?php if (get_option('wp_anti_spam_gravatar') == 'mark-it-as-spam') { ?> checked="checked"<?php } ?> />
+				<?php _e('mark it as spam','WP-Anti-Spam'); ?>
+			</label>
+			&nbsp;
+			<label>
+				<input name="wp_anti_spam_gravatar" type="radio" value="block-it"<?php if (get_option('wp_anti_spam_gravatar') == 'block-it') { ?> checked="checked"<?php } ?> />
+				<?php _e('block it','WP-Anti-Spam'); ?>
+			</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<th scope="row">
+			<?php _e('Word Limit','WP-Anti-Spam'); ?>
+		</th>
+		<td>
+			<label>
+				<?php _e('min','WP-Anti-Spam'); ?>
+				<input type="text" name="wp_anti_spam_min" value="<?php echo get_option('wp_anti_spam_min'); ?>" size="8" />
+			</label>
+			&nbsp;
+			<label>
+				<?php _e('max','WP-Anti-Spam'); ?>
+				<input type="text" name="wp_anti_spam_max" value="<?php echo get_option('wp_anti_spam_max'); ?>" size="8" />
+			</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<th scope="row">
 			<?php _e('Delete Options','WP-Anti-Spam'); ?>
 		</th>
 		<td>
@@ -85,7 +125,7 @@ function wp_anti_spam_options(){
 </table>
 
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="wp_anti_spam_words,wp_anti_spam_spambots,wp_anti_spam_links,wp_anti_spam_cn_must,wp_anti_spam_deactivate,wp_anti_spam_support" />
+<input type="hidden" name="page_options" value="wp_anti_spam_words,wp_anti_spam_spambots,wp_anti_spam_links,wp_anti_spam_cn_must,wp_anti_spam_gravatar,wp_anti_spam_min,wp_anti_spam_max,wp_anti_spam_deactivate,wp_anti_spam_support" />
 
 <p class="submit">
 <input type="submit" class="button-primary" name="Submit" value="<?php _e('Save Changes'); ?>" />
@@ -117,7 +157,7 @@ If you find my work useful and you want to encourage the development of more fre
 <li><a href="http://boliquan.com/" target="_blank">BoLiQuan</a></li>
 </ul>
 
-<div style="text-align:center; margin:60px 0 10px 0;">&copy; 2011 BoLiQuan</div>
+<div style="text-align:center; margin:60px 0 10px 0;">&copy; <?php echo date("Y"); ?> BoLiQuan</div>
 
 </div>
 <?php 

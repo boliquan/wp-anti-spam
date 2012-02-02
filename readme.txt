@@ -1,10 +1,10 @@
 === WP Anti Spam ===
 Contributors: boliquan
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wp anti spam,spambot,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial
+Tags: wp anti spam,spambot,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial,word limit
 Requires at least: 2.7
-Tested up to: 3.2.1
-Stable tag: 1.2.2
+Tested up to: 3.3.1
+Stable tag: 1.2.3
 
 WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url". 
 
@@ -12,6 +12,8 @@ WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","
 
 WP Anti Spam can anti automated spambots, it can also anti spams by"comment","ip","name","email","url".
 It is a good assistant to help you anti artificial spams.
+You can set the 'Minimum number of words' and 'Maximum number of words' to limit the comment words.
+When the commenter has no Gravatar,you can choose 'no treatment' or 'mark it as spam' or 'block it'.
 The admin has just to add some words to a ban list, and the system will prevent users who break the rules from posting again.
 If you speak chinese, you can check 'Some Chinese' to anti the spams from other languages.
 Besides, it can delete its own options, so it is a green plugin ! 
@@ -21,6 +23,8 @@ Besides, it can delete its own options, so it is a green plugin !
 * Add 'Banned Words' to avoid comments contains banned words.
 * Check 'Disallow Spambots' to avoid spambots.
 * Check 'Disallow Links' to disallow the comments that contain links.
+* 'When No Gravatar': When the commenter has no Gravatar,you can choose 'no treatment' or 'mark it as spam' or 'block it'.
+* 'Word Limit': You can limit the comment words, 'Minimum number of words' and 'Maximum number of words' 
 * Check 'Delete Options' to delete options while deactivate this plugin.
 * Check 'Support Author' to help more people known of WP Anti Spam,in order to help them stay away from spam comments.
 
@@ -42,6 +46,11 @@ Related Links:
 
 
 == Changelog ==
+
+= 1.2.3 =
+
+* When No Gravatar,you can choose 'no treatment' or 'mark it as spam' or 'block it'
+* Word Limit,you can limit the comment words
 
 = 1.2.2 =
 

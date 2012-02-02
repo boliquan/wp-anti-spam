@@ -2,20 +2,20 @@
 /*
 Plugin Name: WP Anti Spam
 Plugin URI: http://boliquan.com/wp-anti-spam/
-Description: WP Anti Spam can anti automated spambots, it can also anti artificial spams by"comment","ip","name","email","url". If you speak chinese, you can check 'Some Chinese' to anti the spams from other languages. Besides,it can delete its own options, so it is a green plugin ! 
-Version: 1.2.2
+Description: WP Anti Spam can anti automated spambots, it can also anti artificial spams by"comment","ip","name","email","url". It has many other ways to deal with the spam comments. Besides,it can delete its own options, so it is a green plugin ! 
+Version: 1.2.3
 Author: BoLiQuan
 Author URI: http://boliquan.com/
 Text Domain: WP-Anti-Spam
 Domain Path: /lang
 */
 
-function load_wp_anti_spam_lang() {
-		$currentLocale = get_locale();
-		if(!empty($currentLocale)) {
-			$moFile = dirname(__FILE__) . "/lang/wp-anti-spam-" . $currentLocale . ".mo";
-			if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('WP-Anti-Spam', $moFile);
-		}
+function load_wp_anti_spam_lang(){
+	$currentLocale = get_locale();
+	if(!empty($currentLocale)){
+		$moFile = dirname(__FILE__) . "/lang/wp-anti-spam-" . $currentLocale . ".mo";
+		if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('WP-Anti-Spam', $moFile);
+	}
 }
 add_filter('init','load_wp_anti_spam_lang');
 
@@ -30,7 +30,7 @@ function wp_anti_spam($comment_data){
 	foreach($wp_anti_spam_words as $wp_anti_spam_word)
 	foreach($comment_fields as $comment_field)
 	if( $wp_anti_spam_word != '' && isset($_POST[$comment_field]) ){
-		if(eregi($wp_anti_spam_word, $_POST[$comment_field]) !== false) {
+		if(eregi($wp_anti_spam_word, $_POST[$comment_field]) !== false){
  			wp_die(__('Error: The information you submit contains banned words.','WP-Anti-Spam').WASINFO);
 		}
 	}
@@ -77,6 +77,43 @@ if(get_option("wp_anti_spam_spambots")!=''){
 		return $spambots_check;
 	}
 	add_filter('preprocess_comment','wp_anti_spam_spambots');
+}
+
+function was_app_get_html($url,$cookie=''){
+	$curl = curl_init($url);
+	$useragent="Mozilla/5.0 (Windows NT 5.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1";
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt ($curl, CURLOPT_USERAGENT, $useragent);
+	if ($cookie<>'') {
+		curl_setopt ($curl, CURLOPT_COOKIE, $cookie);
+	}
+	$data = curl_exec($curl);
+	curl_close($curl);
+	return $data;
+}
+function was_no_avatar_to_spam($comment){
+	$emaildata = md5( strtolower($comment['comment_author_email']) );
+	$urldata = 'http://www.gravatar.com/avatar/'. $emaildata .'?d=404';
+	$avatarinfo = was_app_get_html( $urldata );
+	if(substr($avatarinfo,0,3)=='404'){
+		if(get_option("wp_anti_spam_gravatar")=='mark-it-as-spam'){
+			add_filter('pre_comment_approved', create_function('', 'return "spam";'));
+		}
+		if(get_option("wp_anti_spam_gravatar")=='block-it' && !is_user_logged_in()){
+			wp_die(__('Error: You have to apply for an avatar at Gravatar.com.','WP-Anti-Spam').WASINFO);
+		}
+	}
+	return $comment;
+}
+add_action('preprocess_comment', 'was_no_avatar_to_spam', 1);
+
+if(get_option("wp_anti_spam_min")!='' && get_option("wp_anti_spam_max")!=''){
+	function was_comment_length($incoming_comment){
+		if(mb_strlen($incoming_comment['comment_content'],'utf-8')<get_option("wp_anti_spam_min") || mb_strlen($incoming_comment['comment_content'],'utf-8')>get_option("wp_anti_spam_max"))
+			wp_die(__('Error: The words you input does not meet the Word Limit.','WP-Anti-Spam').WASINFO);
+		return($incoming_comment);
+	}
+	add_filter('preprocess_comment','was_comment_length');
 }
 
 if(get_option("wp_anti_spam_deactivate")=='yes'){
