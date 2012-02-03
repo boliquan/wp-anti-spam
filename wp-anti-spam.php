@@ -96,7 +96,7 @@ function was_no_avatar_to_spam($comment){
 	$urldata = 'http://www.gravatar.com/avatar/'. $emaildata .'?d=404';
 	$avatarinfo = was_app_get_html( $urldata );
 	if(substr($avatarinfo,0,3)=='404'){
-		if(get_option("wp_anti_spam_gravatar")=='mark-it-as-spam'){
+		if(get_option("wp_anti_spam_gravatar")=='mark-it-as-spam' && !is_user_logged_in()){
 			add_filter('pre_comment_approved', create_function('', 'return "spam";'));
 		}
 		if(get_option("wp_anti_spam_gravatar")=='block-it' && !is_user_logged_in()){

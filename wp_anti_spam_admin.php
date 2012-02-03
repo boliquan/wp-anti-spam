@@ -5,7 +5,7 @@ function wp_anti_spam_admin(){
 function wp_anti_spam_options(){
 	add_option('wp_anti_spam_spambots','yes');
 	add_option('wp_anti_spam_links','yes');
-	add_option('wp_anti_spam_gravatar','no-treatment');
+	add_option('wp_anti_spam_gravatar','mark-it-as-spam');
 	add_option('wp_anti_spam_min','0');
 	add_option('wp_anti_spam_max','9999');
 ?>
@@ -134,15 +134,18 @@ function wp_anti_spam_options(){
 </form>
 
 <br />
-<?php $paypal_url = plugins_url('/img/paypal_32_32.jpg', __FILE__);?>
-<?php $blq_donate_url = plugins_url('/img/btn_donateCC_LG.gif', __FILE__);?>
-<div class="icon32"><img src="<?php echo $paypal_url; ?>" alt="Paypal" /></div>
+<?php $donate_url = plugins_url('/img/paypal_32_32.jpg', __FILE__);?>
+<?php $paypal_donate_url = plugins_url('/img/btn_donateCC_LG.gif', __FILE__);?>
+<?php $ali_donate_url = plugins_url('/img/btn-index.png', __FILE__);?>
+<div class="icon32"><img src="<?php echo $donate_url; ?>" alt="Donate" /></div>
 <h2>Donate</h2>
 <p>
 If you find my work useful and you want to encourage the development of more free resources, you can do it by donating.
 </p>
 <p>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8" target="_blank"><img src="<?php echo $blq_donate_url; ?>" alt="Donate" /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8" target="_blank"><img src="<?php echo $paypal_donate_url; ?>" alt="Paypal Donate" title="Paypal" /></a>
+&nbsp;
+<a href="https://me.alipay.com/boliquan" target="_blank"><img src="<?php echo $ali_donate_url; ?>" alt="Alipay Donate" title="Alipay" /></a>
 </p>
 <br />
 
