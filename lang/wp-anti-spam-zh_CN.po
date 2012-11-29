@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Anti-Spam Languages\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-12 16:32+0800\n"
+"PO-Revision-Date: 2012-11-12 16:32+0800\n"
+"Last-Translator: 夜光 <berttung(#)gmail.com>\n"
+"Language-Team: 玻璃泉BoLiQuan.COM <berttung(#)gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: F:\\xampp\\htdocs\\wordpress\\wp-content\\plugins\\wp-anti-spam\n"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:35
+msgid "Error: The information you submit contains banned words."
+msgstr "错误：您提交的信息中含有禁止的词汇，请返回修改。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:43
+msgid "Error: Your IP has been banned to leave comments."
+msgstr "错误：您的IP地址已被禁止发表评论。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:49
+msgid "Error: Links are not allowed in comments."
+msgstr "错误：评论中禁止含有链接。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:56
+msgid "Error: Comments must contain Chinese."
+msgstr "错误：评论中必须含有中文。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:89
+msgid "Error: You are a automated spambot or your browser does not enable Cookie."
+msgstr "错误：您是机器人或者您的浏览器禁用了Cookie。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:115
+msgid "Error: You have to apply for an avatar at Gravatar.com."
+msgstr "错误：您必须先在Gravatar.com申请一个头像。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:126
+msgid "Error: The words you input does not meet the Word Limit."
+msgstr "错误：评论字数不符合要求。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:145
+msgid "Error: Only the logged user can use this nickname or email."
+msgstr "错误：您不允许使用这个昵称或邮箱，已登录用户才可以使用。"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:183
+msgid "Settings"
+msgstr "设置"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:34
+msgid "Banned Words (one per line)"
+msgstr "禁止的词汇 (每行一个)"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:39
+msgid "Comments will be banned contain above words, no matter the words appear in \"comment\",\"ip\",\"name\",\"email\",\"url\"."
+msgstr "含有以上词汇的评论会被禁止,无论这个词汇出现在\"评论内容\",\"IP地址\",\"昵称\",\"邮箱\"还是\"网址\"中."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:45
+msgid "Disallow Links"
+msgstr "禁止评论中含链接"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:50
+msgid "Disallow the comments that contain links."
+msgstr "禁止评论中含有链接,垃圾评论的最大特征就是包含链接."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:56
+msgid "Some Chinese"
+msgstr "评论中必须含中文"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:61
+msgid "Notice: If you do not speak chinese, please don't check this."
+msgstr "评论内容中必须含有中文,勾选后可以阻止英文垃圾机器评论."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:67
+msgid "Generate Hidden Field"
+msgstr "生成动态隐藏域"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:72
+msgid "Generate an hidden field to anti spambots,but if you open the cache or your browser's Cookie are not enabled,please don't check this."
+msgstr "生成隐藏域阻止机器评论,但是如果您开启了缓存或者访客浏览器禁用了Cookie,评论也会被阻止,此项请谨慎勾选."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:78
+msgid "When No Gravatar"
+msgstr "没有头像的评论"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:83
+msgid "no treatment"
+msgstr "不作处理"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:88
+msgid "mark it as spam"
+msgstr "标记为垃圾评论"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:93
+msgid "block it"
+msgstr "阻止并提示"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:99
+msgid "Word Limit"
+msgstr "评论字数限制"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:103
+msgid "min"
+msgstr "最少"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:108
+msgid "max"
+msgstr "最多"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:115
+msgid "Stop Posing (separated by commas)"
+msgstr "防止冒充博主 (英文逗号隔开)"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:119
+msgid "protected nicknames"
+msgstr "受保护的昵称"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:124
+msgid "protected emails"
+msgstr "受保护的邮箱"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:131
+msgid "Delete Options"
+msgstr "禁用时自动删除设置"
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:136
+msgid "Delete options while deactivate this plugin."
+msgstr "当禁用此插件时自动删除此插件的设置数据."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:154
+msgid "Save Changes"
+msgstr "保存更改"
+
