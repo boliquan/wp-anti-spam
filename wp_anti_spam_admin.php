@@ -35,7 +35,7 @@ function wp_anti_spam_options(){
 		</th>
 		<td>
 			<label>
-				<textarea type="text" name="wp_anti_spam_words" cols="50" rows="12" style="width:86%;font-size:12px;"><?php echo get_option('wp_anti_spam_words'); ?></textarea>
+				<textarea type="text" name="wp_anti_spam_words" cols="100" rows="11" style="width:800px;height:180px;font-size:12px;"><?php echo get_option('wp_anti_spam_words'); ?></textarea>
 				<br /><?php _e('Comments will be banned contain above words, no matter the words appear in "comment","ip","name","email","url".','WP-Anti-Spam'); ?>
 			</label>
 		</td>
@@ -47,7 +47,7 @@ function wp_anti_spam_options(){
 		<td>
 			<label>
 				<input type="checkbox" name="wp_anti_spam_links" value="yes" <?php if(get_option("wp_anti_spam_links")=='yes') echo 'checked="checked"'; ?> />
-				<?php _e("Disallow the comments that contain links.",'WP-Anti-Spam'); ?>
+				<?php _e("Disallow the comments that contain links in nickname or comment content.",'WP-Anti-Spam'); ?>
 			</label>
 		</td>
 	</tr>
@@ -69,7 +69,7 @@ function wp_anti_spam_options(){
 		<td>
 			<label>
 				<input type="checkbox" name="wp_anti_spam_hiddenfield" value="yes" <?php if(get_option("wp_anti_spam_hiddenfield")=='yes') echo 'checked="checked"'; ?> />
-				<?php _e("Generate an hidden field to anti spambots,but if you open the cache or your browser's Cookie are not enabled,please don't check this.",'WP-Anti-Spam'); ?>
+				<?php _e("Generate an hidden field to anti spambots,but if you open the cache or your browser's Cookie are disabled,please don't check this.",'WP-Anti-Spam'); ?>
 			</label>
 		</td>
 	</tr>
@@ -101,28 +101,28 @@ function wp_anti_spam_options(){
 		<td>
 			<label>
 				<?php _e('min','WP-Anti-Spam'); ?>
-				<input type="text" name="wp_anti_spam_min" value="<?php echo get_option('wp_anti_spam_min'); ?>" size="8" />
+				<input type="text" name="wp_anti_spam_min" value="<?php echo get_option('wp_anti_spam_min'); ?>" size="8" style="width:62px;height:24px;" />
 			</label>
 			&nbsp;
 			<label>
 				<?php _e('max','WP-Anti-Spam'); ?>
-				<input type="text" name="wp_anti_spam_max" value="<?php echo get_option('wp_anti_spam_max'); ?>" size="8" />
+				<input type="text" name="wp_anti_spam_max" value="<?php echo get_option('wp_anti_spam_max'); ?>" size="8" style="width:62px;height:24px;" />
 			</label>
 		</td>
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<?php _e('Stop Posing (separated by commas)','WP-Anti-Spam'); ?>
+			<?php _e('Stop Posing <br /><small>(separated by commas)</small>','WP-Anti-Spam'); ?>
 		</th>
 		<td>
 			<label>
 				<?php _e('protected nicknames','WP-Anti-Spam'); ?>
-				<input type="text" name="wp_anti_spam_nicknames" value="<?php echo get_option('wp_anti_spam_nicknames'); ?>" size="26" />
+				<input type="text" name="wp_anti_spam_nicknames" value="<?php echo get_option('wp_anti_spam_nicknames'); ?>" size="30" style="width:200px;height:24px;" />
 			</label>
 			&nbsp;
 			<label>
 				<?php _e('protected emails','WP-Anti-Spam'); ?>
-				<input type="text" name="wp_anti_spam_emails" value="<?php echo get_option('wp_anti_spam_emails'); ?>" size="26" />
+				<input type="text" name="wp_anti_spam_emails" value="<?php echo get_option('wp_anti_spam_emails'); ?>" size="30" style="width:200px;height:24px;" />
 			</label>
 		</td>
 	</tr>
@@ -176,7 +176,8 @@ If you find my work useful and you want to encourage the development of more fre
 <div class="icon32"><img src="<?php echo $blq_logo_url; ?>" alt="BoLiQuan" /></div>
 <h2>Related Links</h2>
 <ul style="margin:0 18px;">
-<li><a href="http://boliquan.com/wp-anti-spam/" target="_blank">WP-Anti-Spam (FAQ)</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-anti-spam/" target="_blank">WP Anti Spam (FAQ)</a> | <a href="http://boliquan.com/wp-anti-spam/" target="_blank">Submit Translations</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-clean-up/" target="_blank">WP Clean Up</a> | <a href="http://wordpress.org/extend/plugins/wp-clean-up/" target="_blank">Download</a></li>
 <li><a href="http://boliquan.com/wp-smtp/" target="_blank">WP SMTP</a> | <a href="http://wordpress.org/extend/plugins/wp-smtp/" target="_blank">Download</a></li>
 <li><a href="http://boliquan.com/wp-code-highlight/" target="_blank">WP Code Highlight</a> | <a href="http://wordpress.org/extend/plugins/wp-code-highlight/" target="_blank">Download</a></li>
 <li><a href="http://boliquan.com/wp-slug-translate/" target="_blank">WP Slug Translate</a> | <a href="http://wordpress.org/extend/plugins/wp-slug-translate/" target="_blank">Download</a></li>

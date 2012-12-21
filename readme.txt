@@ -4,10 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6T
 Tags: wp anti spam,spambot,hidden field,posing,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial,word limit
 License: GPLv2
 Requires at least: 2.7
-Tested up to: 3.4.2
-Stable tag: 1.2.5
+Tested up to: 3.5
+Stable tag: 1.2.6
 
-WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url". 
+WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url".
+
 
 == Description ==
 
@@ -26,7 +27,7 @@ Besides, it can delete its own options, so it is a green plugin !
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. "Settings"->"WP Anti Spam"
 4. Add "Banned Words" to avoid comments contains banned words.
-5. Check "Disallow Links" to disallow the comments that contain links.
+5. Check "Disallow Links" to disallow the comments that contain links in nickname or comment content.
 6. Check "Generate Hidden Field" to avoid spambots, but if you open the cache or your browser's Cookie are not enabled, please don't check this.
 7. "When No Gravatar": When the commenter has no Gravatar,you can choose 'no treatment' or 'mark it as spam' or 'block it'.
 8. "Word Limit": You can limit the comment words, 'Minimum number of words' and 'Maximum number of words'. 
@@ -36,7 +37,8 @@ Besides, it can delete its own options, so it is a green plugin !
 
 Related Links:
 
-* <a href="http://boliquan.com/wp-anti-spam/">WP-Anti-Spam (FAQ)</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/">Download</a>
+* <a href="http://boliquan.com/wp-anti-spam/">WP Anti Spam (FAQ)</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/">Download</a>
+* <a href="http://boliquan.com/wp-clean-up/">WP Clean Up</a> | <a href="http://wordpress.org/extend/plugins/wp-clean-up/">Download</a>
 * <a href="http://boliquan.com/wp-smtp/">WP SMTP</a> | <a href="http://wordpress.org/extend/plugins/wp-smtp/">Download</a>
 * <a href="http://boliquan.com/wp-code-highlight/">WP Code Highlight</a> | <a href="http://wordpress.org/extend/plugins/wp-code-highlight/">Download</a>
 * <a href="http://boliquan.com/wp-slug-translate/">WP Slug Translate</a> | <a href="http://wordpress.org/extend/plugins/wp-slug-translate/">Download</a>
@@ -53,7 +55,7 @@ Related Links:
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. "Settings"->"WP Anti Spam"
 4. Add "Banned Words" to avoid comments contains banned words.
-5. Check "Disallow Links" to disallow the comments that contain links.
+5. Check "Disallow Links" to disallow the comments that contain links in nickname or comment content.
 6. Check "Generate Hidden Field" to avoid spambots, but if you open the cache or your browser's Cookie are not enabled, please don't check this.
 7. "When No Gravatar": When the commenter has no Gravatar,you can choose 'no treatment' or 'mark it as spam' or 'block it'.
 8. "Word Limit": You can limit the comment words, 'Minimum number of words' and 'Maximum number of words'. 
@@ -63,6 +65,12 @@ Related Links:
 
 
 == Changelog ==
+
+= 1.2.6 =
+
+* Replace eregi() with stristr()
+* Change the method of checking Gravatar
+* Some optimization
 
 = 1.2.5 =
 

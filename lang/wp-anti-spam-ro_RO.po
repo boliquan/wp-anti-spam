@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Anti-Spam Languages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-22 15:20+0800\n"
-"PO-Revision-Date: 2011-11-18 14:14+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2012-12-21 15:22+0800\n"
+"PO-Revision-Date: 2012-12-21 15:23+0800\n"
+"Last-Translator: Web Geek\n"
 "Language-Team: Web Geek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,57 +14,127 @@ msgstr ""
 "X-Poedit-Language: Romanian\n"
 "X-Poedit-Country: ROMANIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: D:\\xampp\\htdocs\\wp3\\wp-content\\plugins\\wp-anti-spam\n"
+"X-Poedit-SearchPath-0: F:\\xampp\\htdocs\\wordpress\\wp-content\\plugins\\wp-anti-spam\n"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:33
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:36
 msgid "Error: The information you submit contains banned words."
 msgstr "Eroare: informaţiile pe care le prezintă conţine cuvinte interzise."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:39
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:44
 msgid "Error: Your IP has been banned to leave comments."
 msgstr "Eroare: IP-ul tau a fost interzis pentru a lăsa comentarii."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:45
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:50
+msgid "Error: Links are not allowed in nickname or comment content."
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:57
 msgid "Error: Comments must contain Chinese."
 msgstr "Eroare: Comments trebuie să conţină Chineză."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:67
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:87
 msgid "Error: You are a automated spambot or your browser does not enable Cookie."
 msgstr "Eroare: Sunteţi un Spambot automatizate sau browserul nu permite Cookie."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:21
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:116
+msgid "Error: You have to apply for an avatar at Gravatar.com."
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:127
+msgid "Error: The words you input does not meet the Word Limit."
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:149
+msgid "Error: Only the logged user can use this nickname or email."
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp-anti-spam.php:186
+msgid "Settings"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:34
 msgid "Banned Words (one per line)"
 msgstr "Cuvinte interzise (unul pe fiecare rând)"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:26
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:39
 msgid "Comments will be banned contain above words, no matter the words appear in \"comment\",\"ip\",\"name\",\"email\",\"url\"."
 msgstr "Comentariile vor fi interzise de mai sus conţine cuvinte, indiferent de cuvintele apar in \" comentariu \", \"ip \", \"nume \", \"e-mail \", \"url \"."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:32
-msgid "Disallow Spambots"
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:45
+#, fuzzy
+msgid "Disallow Links"
 msgstr "Nu permiteţi spamboţi;"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:37
-msgid "Disallow automated spambots, but if you open the cache or your browser's Cookie are not enabled, please don't check this."
-msgstr "Spamboţi interzicerea automată, dar dacă deschideţi cache-ul sau browser-ul dvs. Cookie nu sunt activate, vă rugăm să nu verifica acest lucru."
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:50
+msgid "Disallow the comments that contain links in nickname or comment content."
+msgstr ""
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:43
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:56
 msgid "Some Chinese"
 msgstr "Unii chinezi"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:48
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:61
 msgid "Notice: If you do not speak chinese, please don't check this."
 msgstr "Notă: Dacă nu vorbiţi chineză, vă rugăm să nu verifica acest lucru."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:54
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:67
+msgid "Generate Hidden Field"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:72
+#, fuzzy
+msgid "Generate an hidden field to anti spambots,but if you open the cache or your browser's Cookie are disabled,please don't check this."
+msgstr "Spamboţi interzicerea automată, dar dacă deschideţi cache-ul sau browser-ul dvs. Cookie nu sunt activate, vă rugăm să nu verifica acest lucru."
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:78
+msgid "When No Gravatar"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:83
+msgid "no treatment"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:88
+msgid "mark it as spam"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:93
+msgid "block it"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:99
+msgid "Word Limit"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:103
+msgid "min"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:108
+msgid "max"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:115
+msgid "Stop Posing <br /><small>(separated by commas)</small>"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:119
+msgid "protected nicknames"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:124
+msgid "protected emails"
+msgstr ""
+
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:131
 msgid "Delete Options"
 msgstr "Opţiuni Ştergere"
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:59
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:136
 msgid "Delete options while deactivate this plugin."
 msgstr "Ştergere opţiuni în timp ce dezactiva acest plugin."
 
-#: D:\xampp\htdocs\wp3\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:80
+#: F:\xampp\htdocs\wordpress\wp-content\plugins\wp-anti-spam/wp_anti_spam_admin.php:154
 msgid "Save Changes"
 msgstr "Salvaţi Modificările"
 

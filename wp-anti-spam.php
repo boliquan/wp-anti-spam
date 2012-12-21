@@ -3,7 +3,7 @@
 Plugin Name: WP Anti Spam
 Plugin URI: http://boliquan.com/wp-anti-spam/
 Description: WP Anti Spam can anti automated spambots, it can also anti artificial spams by"comment","ip","name","email","url". It has many other ways to deal with the spam comments. Besides,it can delete its own options, so it is a green plugin ! 
-Version: 1.2.5
+Version: 1.2.6
 Author: BoLiQuan
 Author URI: http://boliquan.com/
 Text Domain: WP-Anti-Spam
@@ -31,7 +31,8 @@ function wp_anti_spam($comment_data){
 		$wp_anti_spam_word = trim($wp_anti_spam_word);
 		foreach($comment_fields as $comment_field){
 			if( $wp_anti_spam_word != '' && isset($_POST[$comment_field]) ){
-				if(eregi($wp_anti_spam_word, $_POST[$comment_field]) !== false){
+				//if(eregi($wp_anti_spam_word, $_POST[$comment_field]) !== false){
+				if(stristr($_POST[$comment_field],$wp_anti_spam_word) !== false){
  					wp_die(__('Error: The information you submit contains banned words.','WP-Anti-Spam').WASINFO);
 				}
 			}
@@ -44,9 +45,9 @@ function wp_anti_spam($comment_data){
 	}
 
 	if(get_option("wp_anti_spam_links")=='yes'){
-		$links = '/http:\/\//u';
-		if(preg_match($links, $comment_data['comment_content'])){
-			wp_die(__('Error: Links are not allowed in comments.','WP-Anti-Spam').WASINFO);
+		$links = '/http:\/\/|https:\/\/|www\./u';
+		if( preg_match($links,$comment_data['comment_author']) || preg_match($links,$comment_data['comment_content']) ){
+			wp_die(__('Error: Links are not allowed in nickname or comment content.','WP-Anti-Spam').WASINFO);
 		}
 	}
 
@@ -59,11 +60,8 @@ function wp_anti_spam($comment_data){
 
 	return($comment_data);
 }
+add_filter('preprocess_comment','wp_anti_spam',1);
 
-add_filter('preprocess_comment','wp_anti_spam');
-?>
-<?php if(is_admin()){require_once('wp_anti_spam_admin.php');} ?>
-<?php
 if(get_option("wp_anti_spam_hiddenfield")!=''){
 	if(!isset($_SESSION)){
 		session_start();
@@ -90,24 +88,27 @@ if(get_option("wp_anti_spam_hiddenfield")!=''){
 		}
 		return $hidden_check;
 	}
-	add_filter('preprocess_comment','wp_anti_spam_hiddenfield');
+	add_filter('preprocess_comment','wp_anti_spam_hiddenfield',1);
 }
 
 if(get_option("wp_anti_spam_gravatar")!='no-treatment'){
-	function was_app_get_html($url){
+	function was_get_headers_curl($url){
 		$curl = curl_init($url);
-		$useragent="Mozilla/5.0 (Windows NT 5.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1";
+		$useragent = "Mozilla/5.0 (Windows NT 5.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1";
+		curl_setopt($curl, CURLOPT_USERAGENT, $useragent);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt ($curl, CURLOPT_USERAGENT, $useragent);
-		$data = curl_exec($curl);
+		curl_setopt($curl, CURLOPT_HEADER, true);
+		curl_setopt($curl, CURLOPT_NOBODY, true);
+		$headers = trim(curl_exec($curl));
+		$headers = explode("\n",$headers);
 		curl_close($curl);
-		return $data;
+		return $headers;
 	}
 	function was_no_avatar_to_spam($comment){
 		$emaildata = md5( strtolower($comment['comment_author_email']) );
 		$urldata = 'http://www.gravatar.com/avatar/'. $emaildata .'?d=404';
-		$avatarinfo = was_app_get_html( $urldata );
-		if(substr($avatarinfo,0,3)=='404'){
+		$avatarheaders = was_get_headers_curl($urldata);
+		if(preg_match("/404/",$avatarheaders[0])){
 			if(get_option("wp_anti_spam_gravatar")=='mark-it-as-spam' && !is_user_logged_in()){
 				add_filter('pre_comment_approved', create_function('', 'return "spam";'));
 			}
@@ -127,25 +128,27 @@ if(get_option("wp_anti_spam_min")!='' && get_option("wp_anti_spam_max")!=''){
 		}
 		return($incoming_comment);
 	}
-	add_filter('preprocess_comment','was_comment_length');
+	add_filter('preprocess_comment','was_comment_length',1);
 }
 
-if(get_option("wp_anti_spam_nicknames")!='' || get_option("wp_anti_spam_emails")!=''){
-	function was_commenter_check($incoming_comment){
-		$isposing = 0;
+function was_commenter_check($incoming_comment){
+	$isposing = 0;
+	if(get_option("wp_anti_spam_nicknames")!=''){
 		$wp_anti_spam_nicknames = explode("," , get_option("wp_anti_spam_nicknames"));
 		foreach($wp_anti_spam_nicknames as $wp_anti_spam_nickname){
 			if($incoming_comment['comment_author'] == trim($wp_anti_spam_nickname)) { $isposing = 1; }
 		}
+	}
+	if(get_option("wp_anti_spam_emails")!=''){
 		$wp_anti_spam_emails = explode("," , get_option("wp_anti_spam_emails"));
 		foreach($wp_anti_spam_emails as $wp_anti_spam_email){
 			if($incoming_comment['comment_author_email'] == trim($wp_anti_spam_email)) { $isposing = 1; }
 		}
-		if(!$isposing || is_user_logged_in()) { return $incoming_comment; }
-		wp_die(__('Error: Only the logged user can use this nickname or email.','WP-Anti-Spam').WASINFO);
 	}
-	add_filter('preprocess_comment','was_commenter_check');
+	if(!$isposing || is_user_logged_in()) { return $incoming_comment; }
+	wp_die(__('Error: Only the logged user can use this nickname or email.','WP-Anti-Spam').WASINFO);
 }
+add_filter('preprocess_comment','was_commenter_check',1);
 
 function wp_anti_spam_activate(){
 	add_option('wp_anti_spam_words','');
@@ -185,5 +188,7 @@ function wp_anti_spam_settings_link($action_links,$plugin_file){
 	}
 	return $action_links;
 }
-add_filter('plugin_action_links','wp_anti_spam_settings_link',10,4); 
+add_filter('plugin_action_links','wp_anti_spam_settings_link',10,4);
+
+if(is_admin()){require_once('wp_anti_spam_admin.php');}
 ?>
