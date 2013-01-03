@@ -70,7 +70,7 @@ Related Links:
 
 * Replace eregi() with stristr()
 * Change the method of checking Gravatar
-* Some optimization
+* Add Persian language packs(fa_IR), Thanks to: [TATAR](http://www.higgsboson.ir)
 
 = 1.2.5 =
 

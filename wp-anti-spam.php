@@ -188,7 +188,7 @@ function wp_anti_spam_settings_link($action_links,$plugin_file){
 	}
 	return $action_links;
 }
-add_filter('plugin_action_links','wp_anti_spam_settings_link',10,4);
+add_filter('plugin_action_links','wp_anti_spam_settings_link',10,2);
 
 if(is_admin()){require_once('wp_anti_spam_admin.php');}
 ?>
