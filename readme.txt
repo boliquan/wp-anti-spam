@@ -1,11 +1,11 @@
 === WP Anti Spam ===
 Contributors: boliquan
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCWY6NPFRR8EY
 Tags: wp anti spam,spambot,hidden field,posing,spam,spammer,anti spam,comment,ip,author,email,url,robot,automated spambots,blacklist,block spam,bot,comment spam,session,some chinese,chinese,artificial,word limit
 License: GPLv2
 Requires at least: 2.7
-Tested up to: 3.5
-Stable tag: 1.2.6
+Tested up to: 3.9.1
+Stable tag: 1.2.7
 
 WP Anti Spam can anti automated spambots or anti spams by"comment","ip","name","email","url".
 
@@ -37,12 +37,12 @@ Besides, it can delete its own options, so it is a green plugin !
 
 Related Links:
 
-* <a href="http://boliquan.com/wp-anti-spam/">WP Anti Spam (FAQ)</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/">Download</a>
-* <a href="http://boliquan.com/wp-clean-up/">WP Clean Up</a> | <a href="http://wordpress.org/extend/plugins/wp-clean-up/">Download</a>
-* <a href="http://boliquan.com/wp-smtp/">WP SMTP</a> | <a href="http://wordpress.org/extend/plugins/wp-smtp/">Download</a>
-* <a href="http://boliquan.com/wp-code-highlight/">WP Code Highlight</a> | <a href="http://wordpress.org/extend/plugins/wp-code-highlight/">Download</a>
-* <a href="http://boliquan.com/wp-slug-translate/">WP Slug Translate</a> | <a href="http://wordpress.org/extend/plugins/wp-slug-translate/">Download</a>
-* <a href="http://boliquan.com/yg-share/">YG Share</a> | <a href="http://wordpress.org/extend/plugins/yg-share/">Download</a>
+* <a href="http://boliquan.com/wp-anti-spam/">WP Anti Spam (FAQ)</a> | <a href="http://wordpress.org/plugins/wp-anti-spam/">Download</a>
+* <a href="http://boliquan.com/wp-clean-up/">WP Clean Up</a> | <a href="http://wordpress.org/plugins/wp-clean-up/">Download</a>
+* <a href="http://boliquan.com/wp-smtp/">WP SMTP</a> | <a href="http://wordpress.org/plugins/wp-smtp/">Download</a>
+* <a href="http://boliquan.com/wp-code-highlight/">WP Code Highlight</a> | <a href="http://wordpress.org/plugins/wp-code-highlight/">Download</a>
+* <a href="http://boliquan.com/wp-slug-translate/">WP Slug Translate</a> | <a href="http://wordpress.org/plugins/wp-slug-translate/">Download</a>
+* <a href="http://boliquan.com/yg-share/">YG Share</a> | <a href="http://wordpress.org/plugins/yg-share/">Download</a>
 * <a href="http://boliquan.com/">BoLiQuan</a>
 * <a href="http://boliquan.com/">玻璃泉</a>
 * <a href="http://boliquan.com/">夜光</a>
@@ -66,6 +66,10 @@ Related Links:
 
 == Changelog ==
 
+= 1.2.7 =
+
+* Some optimization
+
 = 1.2.6 =
 
 * Replace eregi() with stristr()
@@ -79,7 +83,7 @@ Related Links:
 = 1.2.4 =
 
 * Add settings link
-* Some optimize
+* Some optimization
 
 = 1.2.3 =
 
@@ -100,23 +104,22 @@ Related Links:
 
 = 1.1.9 =
 
-* Some optimize
+* Some optimization
 * Corrected some mistakes
 
 = 1.1.8 =
 
 * Anti automated spambots
-* Some optimize
 * Add paypal button
 
 = 1.1.7 =
 
-* Some optimize
+* Some optimization
 * Add an option
 
 = 1.1.6 =
 
-* First release.
+* First release
 
 
 == Screenshots ==

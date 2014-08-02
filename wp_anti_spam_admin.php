@@ -23,7 +23,7 @@ function wp_anti_spam_options(){
 	
 <?php screen_icon(); ?>
 <h2>WP Anti Spam</h2>
-<div style="text-align:center;"><a href="http://wordpress.org/extend/plugins/wp-anti-spam/" target="_blank">How to use WP Anti Spam ?</a> | <a href="http://boliquan.com/wp-anti-spam/" target="_blank">Homepage</a></div>
+<div style="text-align:center;"><a href="http://wordpress.org/plugins/wp-anti-spam/" target="_blank">How to use WP Anti Spam ?</a> | <a href="http://boliquan.com/wp-anti-spam/" target="_blank">Homepage</a></div>
 
 <form action="options.php" method="post" enctype="multipart/form-data" name="wp_anti_spam_form">
 <?php settings_fields('was-settings'); ?>
@@ -158,17 +158,17 @@ function wp_anti_spam_options(){
 
 <br />
 <?php $donate_url = plugins_url('/img/paypal_32_32.jpg', __FILE__);?>
-<?php $paypal_donate_url = plugins_url('/img/btn_donateCC_LG.gif', __FILE__);?>
-<?php $ali_donate_url = plugins_url('/img/alipay_donate.png', __FILE__);?>
+<?php $paypal_donate_url = plugins_url('/img/paypal_donate_email.jpg', __FILE__);?>
+<?php $ali_donate_url = plugins_url('/img/alipay_donate_email.jpg', __FILE__);?>
 <div class="icon32"><img src="<?php echo $donate_url; ?>" alt="Donate" /></div>
 <h2>Donate</h2>
 <p>
 If you find my work useful and you want to encourage the development of more free resources, you can do it by donating.
 </p>
 <p>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SKA6TPPWSATKG&item_name=BoLiQuan&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8" target="_blank"><img src="<?php echo $paypal_donate_url; ?>" alt="Paypal Donate" title="Paypal" /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SCWY6NPFRR8EY" target="_blank"><img src="<?php echo $paypal_donate_url; ?>" alt="Paypal Donate" title="Paypal" /></a>
 &nbsp;
-<a href="https://me.alipay.com/boliquan" target="_blank"><img src="<?php echo $ali_donate_url; ?>" alt="Alipay Donate" title="Alipay" /></a>
+<a href="https://www.alipay.com/" target="_blank"><img src="<?php echo $ali_donate_url; ?>" alt="Alipay Donate" title="Alipay" /></a>
 </p>
 <br />
 
@@ -176,17 +176,17 @@ If you find my work useful and you want to encourage the development of more fre
 <div class="icon32"><img src="<?php echo $blq_logo_url; ?>" alt="BoLiQuan" /></div>
 <h2>Related Links</h2>
 <ul style="margin:0 18px;">
-<li><a href="http://boliquan.com/wp-anti-spam/" target="_blank">WP Anti Spam (FAQ)</a> | <a href="http://boliquan.com/wp-anti-spam/" target="_blank">Submit Translations</a> | <a href="http://wordpress.org/extend/plugins/wp-anti-spam/" target="_blank">Download</a></li>
-<li><a href="http://boliquan.com/wp-clean-up/" target="_blank">WP Clean Up</a> | <a href="http://wordpress.org/extend/plugins/wp-clean-up/" target="_blank">Download</a></li>
-<li><a href="http://boliquan.com/wp-smtp/" target="_blank">WP SMTP</a> | <a href="http://wordpress.org/extend/plugins/wp-smtp/" target="_blank">Download</a></li>
-<li><a href="http://boliquan.com/wp-code-highlight/" target="_blank">WP Code Highlight</a> | <a href="http://wordpress.org/extend/plugins/wp-code-highlight/" target="_blank">Download</a></li>
-<li><a href="http://boliquan.com/wp-slug-translate/" target="_blank">WP Slug Translate</a> | <a href="http://wordpress.org/extend/plugins/wp-slug-translate/" target="_blank">Download</a></li>
-<li><a href="http://boliquan.com/yg-share/" target="_blank">YG Share</a> | <a href="http://wordpress.org/extend/plugins/yg-share/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-anti-spam/" target="_blank">WP Anti Spam (FAQ)</a> | <a href="http://boliquan.com/wp-anti-spam/" target="_blank">Submit Translations</a> | <a href="http://wordpress.org/plugins/wp-anti-spam/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-clean-up/" target="_blank">WP Clean Up</a> | <a href="http://wordpress.org/plugins/wp-clean-up/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-smtp/" target="_blank">WP SMTP</a> | <a href="http://wordpress.org/plugins/wp-smtp/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-code-highlight/" target="_blank">WP Code Highlight</a> | <a href="http://wordpress.org/plugins/wp-code-highlight/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/wp-slug-translate/" target="_blank">WP Slug Translate</a> | <a href="http://wordpress.org/plugins/wp-slug-translate/" target="_blank">Download</a></li>
+<li><a href="http://boliquan.com/yg-share/" target="_blank">YG Share</a> | <a href="http://wordpress.org/plugins/yg-share/" target="_blank">Download</a></li>
 <li><a href="http://boliquan.com/ylife/" target="_blank">YLife</a> | <a href="http://code.google.com/p/ylife/downloads/list" target="_blank">Download</a></li>
 <li><a href="http://boliquan.com/" target="_blank">BoLiQuan</a></li>
 </ul>
 
-<div style="text-align:center; margin:60px 0 10px 0;">&copy; <?php echo date("Y"); ?> BoLiQuan</div>
+<div style="text-align:center; margin:60px 0 10px 0;">&copy; <?php echo date("Y"); ?> BoLiQuan.COM</div>
 
 </div>
 <?php 

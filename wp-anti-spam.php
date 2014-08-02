@@ -3,7 +3,7 @@
 Plugin Name: WP Anti Spam
 Plugin URI: http://boliquan.com/wp-anti-spam/
 Description: WP Anti Spam can anti automated spambots, it can also anti artificial spams by"comment","ip","name","email","url". It has many other ways to deal with the spam comments. Besides,it can delete its own options, so it is a green plugin ! 
-Version: 1.2.6
+Version: 1.2.7
 Author: BoLiQuan
 Author URI: http://boliquan.com/
 Text Domain: WP-Anti-Spam
